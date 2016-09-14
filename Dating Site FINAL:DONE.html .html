@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ulyses Dating Site</title>
+
+
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css"
+
+          rel="stylesheet" type="text/css" />
+
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+
+<style>label{ text-align: right; vertical-align: top; display: inline-block; width: 180px;
+}
+ label:hover{ color: #ff8800; font-size: 40px;}
+
+    .whitef {color: white}
+
+    article, aside,figure,footer,header,menu,nav,section {
+        display: block;}
+
+</style>
+
+</head>
+<body>
+
+    <h2>Please Enter Your Details For Our Dating Website</h2>
+    <fieldset style=" width: 720px; margin-bottom: 10px; border: 10px solid yellow; background: lightyellow"> <legend>Your Face</legend>
+    <table border="0">
+        <tr>
+            <td>
+                <label style="width: 180px ; display: inline-block;" for="Picture">Your image:</label>
+                <input id="Picture" type="file" onchange="readURL(this)" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label style="width: 180px ; display: inline-block;" for="blah">Image Priview:</label>
+                <img id="blah" src="#">
+            </td>
+        </tr>
+    </table> </fieldset>
+
+<fieldset style=" width: 720px; margin-bottom: 10px; border: 10px solid yellow; background: lightyellow"><legend>Your General Details</legend>
+<table border="0">
+    <tr>
+        <td>
+            <Label style="width: 180px ; display: inline-block;" for="Name">Name:</Label>
+            <input id="Name" type="text" placeholder="Your Full Name" required>
+        </td>
+    </tr>
+
+    <tr>
+         <td>
+            <label>Gender:</label>
+            <input id="Gender Male" type="radio" required>
+            <label  style="width: auto; text-align: right; vertical-align: top;" for="Gender Male">Male</label>
+            <input id="Gender Female" type="radio" required>
+            <label style="width: auto; text-align: right; vertical-align: top;" for="Gender Female">Female</label>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label style="width: 180px ; display: inline-block;" for="Age">Age:</label>
+            <input id="Age" type="number">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label style="width: 180px ; display: inline-block;"for="Date Of Birth">Date Of Birth:</label>
+            <input id="Date Of Birth" type="date">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="Favorite Color">Favorite Color:</label>
+            <input id="Favorite Color" type="color">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label style="width: 180px ; display: inline-block;" for="Which Country">Which Country:</label>
+            <select id="Which Country" required>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kendon</option>
+                <option value="Mexico">Mexico</option>
+                <option value="China">china</option>
+                <option value="England">Englan</option>
+                <option value="Canada">Canada</option>
+            </select>
+        </td>
+    </tr>
+</table>
+    </fieldset>
+
+  <fieldset style=" width: 720px; margin-bottom: 10px; border: 10px solid yellow; background: lightyellow"> <legend>Your Indicators</legend>
+      <table border="0">
+      <tr>
+          <td>
+              <label style="width: 180px ; display: inline-block;" for="Height">Height:</label>
+              <label class="whitef" style="width: auto; background-color: #ff0010">Short</label>
+              <input style="align-content: center" id="Height" type="range">
+              <label class="whitef" style="width: auto; background-color:#8b5184">Tall</label>
+          </td>
+      </tr>
+
+      <tr>
+          <td>
+              <label style="width: 180px ; display: inline-block;" for="Salary">Salary:</label>
+              <label class="whitef" style="width: auto; background-color: #ff0010">Poor</label>
+              <input  style="align-content: center" id="Salary" type="range">
+              <label class="whitef" style="width: auto; background-color: #8b5184">Rich</label>
+          </td>
+      </tr>
+      </table>
+  </fieldset>
+
+<fieldset style=" width: 720px; margin-bottom: 10px; border: 10px solid yellow; background: lightyellow"><legend>Your Contact Imformation</legend>
+    <table border="0">
+        <tr>
+            <td>
+                <label style="width: 180px ; display: inline-block;" for="Email">Email:</label>
+                <input id="Email" type="email">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label style="width: 180px ; display: inline-block;" for="Mobile">Mobile:</label>
+                <input id="Mobile" type="tel">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label style="width: 180px ; display: inline-block;" for="Address">Address:</label>
+                <textarea id="Address"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Method of contact">Method To Contact You:</label>
+                <input id="Method of contact" type="checkbox">
+                <label style="width: auto" for="email">Email</label>
+                <input id="email" type="checkbox">
+                <label style="width: auto" for="Whatsapp">Whatsapp</label>
+                <input id="Whatsapp" type="checkbox">
+                <label style="width: auto" for="Inappchat">In App Chat</label>
+                <input id="Inappchat" type="hidden">
+            </td>
+        </tr>
+    </table>
+</fieldset>
+
+<label style="width:"
+
+<input id="Submit" type="submit" style="width: 300px">
+
+
+<script type="text/javascript">
+    function readURL(input) {
+        if (input.files && input.files [0])
+        {var reader=new FileReader();
+        reader.onload = function (e){$('#blah')
+                .attr('scr', e.target.result)
+                .width(150)
+                .height(200)
+            
+        };reader.readAsDataURL(input.files[0]);
+
+        }
+
+    }
+</script>
+
+</body>
+</html>
